@@ -1,6 +1,6 @@
 {
   "name": "passport-venmo",
-  "version": "1.0.2",
+  "version": "0.0.1",
   "description": "Venmo authentication strategy for Passport.",
   "keywords": [
     "passport",
@@ -19,7 +19,7 @@
   },
   "author": {
     "name": "Ji Ho Koo",
-    "email": "jiho.koo@outlook.com.com",
+    "email": "jiho.koo@outlook.com",
     "url": "http://www.jihokoo.com/"
   },
   "licenses": [
@@ -41,10 +41,11 @@
     "node": ">= 0.4.0"
   },
   "scripts": {
-    "test": "node_modules/.bin/mocha --reporter spec --require test/bootstrap/node test/*.test.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "readmeFilename": "README.md",
   "homepage": "https://github.com/jihokoo/passport-venmo",
-  "_id": "passport-venmo@1.0.2",
-  "_from": "passport-venmo@~1.0.2"
+  "_id": "passport-venmo@0.0.1",
+  "_from": "passport-venmo@~0.0.1"
 }
+
