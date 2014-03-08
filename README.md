@@ -69,17 +69,17 @@ For example:
       "data":{
         "balance": null,
         "user":{
-           "username":"delavara",
-           "first_name":"Cody",
-           "last_name":"De La Vara",
-           "display_name":"Cody De La Vara",
+           "username":"jihokoo",
+           "first_name":"Ji Ho",
+           "last_name":"Koo",
+           "display_name":"Ji Ho Koo",
            "is_friend":false,
-           "friends_count":165,
+           "friends_count":100,
            "about":"So happy!",
            "email":null,
            "phone":null,
-           "profile_picture_url":"https://venmopics.appspot.com/u/v3/s/6ecc7b37-5c4a-49df-b91e-3552f02dc397",
-           "id":"1088551785594880949",
+           "profile_picture_url":"https://venmopics.appspot.com/u/v3/s/some_id",
+           "id":"user's_venmo_id",
            "date_joined":"2013-02-10T21:58:05"
         }
       }
