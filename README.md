@@ -98,8 +98,8 @@ If you intend on making payments on a user's behalf, the 'make_payments' scope m
 
 ## Examples
 
--For a complete, working example, refer to the [login and pay example]
--Example uses MongoDB, make sure you run mongod in the background
+- For a complete, working example, refer to the [login and pay example](https://github.com/jihokoo/passport-venmo/tree/master/examples)
+- Example uses MongoDB, make sure you run mongod in the background
 
 
 ## Credits
