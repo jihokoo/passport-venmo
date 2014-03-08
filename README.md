@@ -66,6 +66,7 @@ application:
 Venmo will return a JSON response
 
 For example:
+
 application:
     {
       "data":{
