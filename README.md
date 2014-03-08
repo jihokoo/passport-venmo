@@ -21,11 +21,11 @@ unobtrusively integrated into any application or framework that supports
 The Venmo OAuth 2.0 authentication strategy authenticates users using a Venmo
 account and OAuth 2.0 tokens.  The strategy requires a `verify` callback, which
 accepts these credentials and calls `done` providing a user, as well as
-`options` specifying a client ID, client secret, and callback URL.
+`options` specifying a 'clientID', 'clientSecret', and 'callbackURL'.
 
-  var VenmoStrategy = require('passport-venmo').Strategy
+application:
 
-
+    var VenmoStrategy = require('passport-venmo').Strategy;
 
     passport.use(new VenmoStrategy({
         clientID: Venmo_CLIENT_ID,
@@ -68,6 +68,7 @@ Venmo will return a JSON response
 For example:
 
 application:
+
     {
       "data":{
         "balance": null,
@@ -86,14 +87,15 @@ application:
            "date_joined":"2013-02-10T21:58:05"
         }
       }
-    }
+    };
 
 The balance, email, and phone fields are 'null'. Venmo requires developers to specify that their applications require this informations in scopes.
 
 For example:
 
 application:
-    app.get('/auth/venmo', passport.authenticate('venmo', {scope: ['access_balance', 'access_phone', 'access_email']}))
+
+    app.get('/auth/venmo', passport.authenticate('venmo', {scope: ['access_balance', 'access_phone', 'access_email']}));
 
 If you intend on making payments on a user's behalf, the 'make_payments' scope must be specified as shown above. Scroll to the bottom of this [page](https://developer.venmo.com/docs/authentication) to see the full list of scopes.
 
