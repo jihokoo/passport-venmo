@@ -1,0 +1,68 @@
+{% extends 'default.html' %}
+
+{% block content %}
+  <div data-ng-controller="UserController">
+    <form class="form-horizontal" method="POST" role="form" action="/auth/venmo/payment">
+      <fieldset style="margin-left: 250px">
+        <!-- <legend >Legend</legend> -->
+        <h3 style="margin-bottom: 30px; margin-top: 30px">Pay or Charge</h3>
+
+        <div class="form-group">
+          <label for="inputPassword" class="col-sm-2 control-label">Access Token</label>
+          <div class="col-sm-5">
+            <input type="text" name="access_token" class="form-control" id="inputPassword" data-ng-model="global.user.access_token" required>
+            <span class="help-block">This can be found on the developer tab of your user page at <a href="https://venmo.com">Venmo</a></span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputEmail" class="col-sm-2 control-label">Recipient's Email</label>
+          <div class="col-sm-5">
+            <input type="text" name="email" class="form-control" id="inputEmail" value="jiho.koo@outlook.com" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputEmail" class="col-sm-2 control-label">Amount</label>
+          <div class="col-sm-5">
+            <input type="text" name="amount" class="form-control" id="inputEmail" value="1" required>
+            <span class="help-block">To charge, input a negative amount. Decimals go to the hundreths-place.</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="textArea" class="col-sm-2 control-label">Note</label>
+          <div class="col-sm-5">
+            <textarea class="form-control" name="note" rows="3" id="textArea" placeholder="What are you paying or charging your friend for?" required></textarea>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Who do you want to share this with?</label>
+          <div class="col-sm-5">
+            <div class="radio">
+              <label>
+                <input type="radio" name="audience" id="optionsRadios1" checked="" value="public" >
+                Public
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="audience" id="optionsRadios2" value="friends">
+                Friends
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="audience" id="optionsRadios2" value="private">
+                Private
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-5 col-lg-offset-2">
+            <button class="btn btn-default">Cancel</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+{% endblock %}

@@ -1,0 +1,43 @@
+<!-- default.html -->
+<!doctype html>
+<html>
+<head>
+    <title>Passport-Venmo</title>
+    <link rel="stylesheet" href="http://bootswatch.com/cerulean/bootstrap.min.css"></link>
+</head>
+    <body data-ng-app="venmo_example">
+        <div class="navbar navbar-default" data-ng-controller="IndexController">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Passport - OAuth 2.0 - Venmo - MEAN - Example</a>
+      </div>
+      <div class="navbar-collapse collapse navbar-responsive-collapse pull-right">
+        <ul class="nav navbar-nav">
+          <li class="active" data-ng-show="global.authenticated"><a href="#">Payment Form</a></li>
+          <li class="active" data-ng-hide="global.authenticated"><a href="/auth/venmo">Log-In with Venmo</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <section >
+        {% block content %}
+        {% endblock %}
+    </section>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-resource.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-resource.min.js">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-route.min.js"></script>
+    <script src="http://angular-ui.github.io/ui-router/release/angular-ui-router.min.js"></script>
+    <script src="/javascripts/users.js"></script>
+    <script type="text/javascript">
+      window.user = {{user|safe}};
+    </script>
+    </body>
+</html>

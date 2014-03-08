@@ -1,0 +1,41 @@
+<!-- index.html -->
+{% extends 'default.html' %}
+
+{% block content %}
+  <div class="jumbotron clearfix" style="width: 90%; height: 80%; margin-right: auto; margin-left: auto" data-ng-controller="UserController">
+    <h1 class="row col-md-offset-4">Success!</h1>
+    <table class="table table-striped table-hover" style="width: 60%; margin-right: auto; margin-left: auto; margin-top: 70px; margin-bottom: 70px">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>User Details</th>
+          <th>Transaction Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Fullname: {{venmo_receipt.data.payment.actor.display_name}}</td>
+          <td>Current Balance: {{venmo_receipt.data.balance}}</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Username: {{venmo_receipt.data.payment.actor.username}}</td>
+          <td>Transaction Type: {{venmo_receipt.data.payment.action}} </td>
+        </tr>
+        <tr class="info">
+          <td>3</td>
+          <td>Date Joined: {{venmo_receipt.data.payment.actor.date_joined}}</td>
+          <td>Amount: {{venmo_receipt.data.payment.amount}}</td>
+        </tr>
+        <tr class="success">
+          <td>4</td>
+          <td>Transaction Target: {{venmo_receipt.data.payment.target.user.display_name}}</td>
+          <td>Transaction Status: {{venmo_receipt.data.payment.status}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+{% endblock %}
+
+

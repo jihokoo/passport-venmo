@@ -1,0 +1,11 @@
+<!-- index.html -->
+{% extends 'default.html' %}
+
+{% block content %}
+  <div class="jumbotron clearfix" style="width: 90%; height: 80%; margin-right: auto; margin-left: auto" data-ng-controller="UserController">
+    <h1 class="row col-md-offset-2">Click the Icon to Log-In!</h1>
+    <div class="row col-md-offset-4 col-md-5 clearfix" style="margin-top: 5%">
+      <a href="/auth/venmo"><img src="images/venmo.png"></a>
+    </div>
+  </div>
+{% endblock %}
